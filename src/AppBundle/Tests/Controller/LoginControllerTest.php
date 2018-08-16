@@ -1,30 +1,9 @@
 <?php
-namespace Tests\AppBundle\Controller;
 
-use Tests\ApiTestCaseBase;
+namespace AppBundle\Tests\Controller;
 
-class LoginControllerTest extends ApiTestCaseBase
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
+class LoginControllerTest extends WebTestCase
 {
-    public function testPOSTLoginUser()
-    {
-        $userName = "mate.misho";
-        $password = "ja_sam_Dalmatino_1950";
-
-        $user = $this->createUser($userName, $password);
-
-        $this->client->request(
-            'POST',
-            '/users/login',
-            [],
-            [],
-            [
-                'CONTENT_TYPE' => 'application/json',
-                'PHP_AUTH_USER' => $userName,
-                'PHP_AUTH_PW'   => $password,
-            ]
-        );
-
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-    }
-
 }
