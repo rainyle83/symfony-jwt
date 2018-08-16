@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerDipuaxc;
+namespace ContainerAvtziiz;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -38,6 +38,7 @@ class appDevDebugProjectContainer extends Container
             'appbundle\\controller\\api\\tokencontroller' => 'AppBundle\\Controller\\Api\\TokenController',
             'appbundle\\controller\\basecontroller' => 'AppBundle\\Controller\\BaseController',
             'appbundle\\controller\\defaultcontroller' => 'AppBundle\\Controller\\DefaultController',
+            'appbundle\\controller\\logincontroller' => 'AppBundle\\Controller\\LoginController',
             'lexik\\bundle\\jwtauthenticationbundle\\encoder\\jwtencoderinterface' => 'Lexik\\Bundle\\JWTAuthenticationBundle\\Encoder\\JWTEncoderInterface',
             'lexik\\bundle\\jwtauthenticationbundle\\security\\http\\authentication\\authenticationfailurehandler' => 'Lexik\\Bundle\\JWTAuthenticationBundle\\Security\\Http\\Authentication\\AuthenticationFailureHandler',
             'lexik\\bundle\\jwtauthenticationbundle\\security\\http\\authentication\\authenticationsuccesshandler' => 'Lexik\\Bundle\\JWTAuthenticationBundle\\Security\\Http\\Authentication\\AuthenticationSuccessHandler',
@@ -138,6 +139,7 @@ class appDevDebugProjectContainer extends Container
             'AppBundle\\Controller\\Api\\TokenController' => 'getTokenControllerService.php',
             'AppBundle\\Controller\\BaseController' => 'getBaseControllerService.php',
             'AppBundle\\Controller\\DefaultController' => 'getDefaultControllerService.php',
+            'AppBundle\\Controller\\LoginController' => 'getLoginControllerService.php',
             'Lexik\\Bundle\\JWTAuthenticationBundle\\Services\\JWSProvider\\JWSProviderInterface' => 'getJWSProviderInterfaceService.php',
             'Lexik\\Bundle\\JWTAuthenticationBundle\\TokenExtractor\\TokenExtractorInterface' => 'getTokenExtractorInterfaceService.php',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController' => 'getRedirectControllerService.php',
@@ -364,7 +366,6 @@ class appDevDebugProjectContainer extends Container
             'security.validator.user_password' => 'getSecurity_Validator_UserPasswordService.php',
             'sensio_distribution.security_checker' => 'getSensioDistribution_SecurityCheckerService.php',
             'sensio_distribution.security_checker.command' => 'getSensioDistribution_SecurityChecker_CommandService.php',
-            'service_locator.sr6ctxe' => 'getServiceLocator_Sr6ctxeService.php',
             'services_resetter' => 'getServicesResetterService.php',
             'session' => 'getSessionService.php',
             'session.handler' => 'getSession_HandlerService.php',
@@ -645,7 +646,6 @@ class appDevDebugProjectContainer extends Container
             'sensio_framework_extra.converter.manager' => true,
             'sensio_framework_extra.security.listener' => true,
             'sensio_framework_extra.view.listener' => true,
-            'service_locator.sr6ctxe' => true,
             'session.handler' => true,
             'session.save_listener' => true,
             'session.storage.filesystem' => true,
